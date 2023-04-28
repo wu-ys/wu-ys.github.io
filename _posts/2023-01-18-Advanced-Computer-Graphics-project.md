@@ -1,7 +1,7 @@
 ---
 layout: article
 tags: project
-title: "Report: Advanced Computer Graphics coarse project (zh-cn)"
+title: "Report: Advanced Computer Graphics project (zh-cn)"
 mathjax: true
 excerpt_type: html
 ---
