@@ -4,6 +4,13 @@ tags: project
 title: "Report: Advanced Computer Graphics project (zh-cn)"
 mathjax: true
 excerpt_type: html
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .7), rgba(139, 34, 139, .7))'
+    src: /assets/20230118-ACG/lambertian.png
 ---
 
 主要内容：路径追踪、重要性采样、不同光学模型材料、布料仿真、材质、抗锯齿 <!--more-->
