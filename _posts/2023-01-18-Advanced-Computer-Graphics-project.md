@@ -1,6 +1,7 @@
 ---
 layout: article
-title: 《高等计算机图形学》课程大作业报告
+tags: project
+title: "Report: Advanced Computer Graphics coarse project (zh-cn)"
 mathjax: true
 excerpt_type: html
 ---
