@@ -8,7 +8,7 @@ excerpt_type: html
 
 ## Chapter 3: Independence and Convergence by distribution
 
-![image-20220613202148138](/assets/20220614-Prob/image-20220613202148138.png)
+![image-20220613202148138](/assets/20220614-Prob/image-20220613202148138.png) <!--more-->
 
 ## Chapter 4: LLN
 
