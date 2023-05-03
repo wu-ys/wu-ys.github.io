@@ -4,6 +4,11 @@ tag: notes
 title: "Notes: Game Theory"
 mathjax: true
 excerpt_type: html
+article_header:
+  type: overlay
+  theme: dark
+  background_image:
+    src: /assets/images/cover/IMG_1220.JPG
 ---
 
 Notes of IIIS *Game Theory* course, Spring 2022, taught by Prof. Zhixuan Fang. <!--more-->

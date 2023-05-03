@@ -19,7 +19,7 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       Notes
+      en      : &EN       Note
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -36,7 +36,7 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       Reports
+      en      : &EN       Report
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -50,6 +50,23 @@ header:
       zh-HK   : *ZH_HANT
       # @end locale config
     url: /reports.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Research
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  科研
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  科研
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      # @end locale config
+    url: /researches.html
 
   - titles:
       # @start locale config

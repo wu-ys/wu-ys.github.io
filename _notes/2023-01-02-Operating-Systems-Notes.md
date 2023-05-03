@@ -4,6 +4,11 @@ tag: notes
 title: "Notes: Operating Systems and Distributed Systems"
 mathjax: true
 excerpt_type: html
+article_header:
+  type: overlay
+  theme: light
+  background_image:
+    src: /assets/images/cover/DSC_2781.JPG
 ---
 
 Notes of IIIS *Operation Systems and Distributed Systems* course, Autumn 2022, taught by Prof. Wei Xu. <!--more-->

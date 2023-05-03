@@ -4,6 +4,11 @@ tag: notes
 title: "Notes: Probability Theory"
 mathjax: true
 excerpt_type: html
+article_header:
+  type: overlay
+  theme: dark
+  background_image:
+    src: /assets/images/cover/DSC_3236.JPG
 ---
 
 2022春数学系《概率论1》笔记，教师：荆文甲 <!--more-->
