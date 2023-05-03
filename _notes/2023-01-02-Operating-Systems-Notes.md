@@ -6,6 +6,8 @@ mathjax: true
 excerpt_type: html
 ---
 
+Notes of IIIS *Operation Systems and Distributed Systems* course, Autumn 2022, taught by Prof. Wei Xu. <!--more-->
+
 - Real-world coding
 - performance, scalability, fault tolerance, cooperate
 

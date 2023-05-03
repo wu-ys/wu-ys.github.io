@@ -6,9 +6,11 @@ mathjax: true
 excerpt_type: html
 ---
 
+2022春数学系《概率论1》笔记，教师：荆文甲 <!--more-->
+
 ## Chapter 3: Independence and Convergence by distribution
 
-![image-20220613202148138](/assets/20220614-Prob/image-20220613202148138.png) <!--more-->
+![image-20220613202148138](/assets/20220614-Prob/image-20220613202148138.png)
 
 ## Chapter 4: LLN
 

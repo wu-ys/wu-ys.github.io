@@ -4,14 +4,21 @@ tag: notes
 title: "Notes: Computer Architecture"
 mathjax: true
 excerpt_type: html
+article_header:
+  type: overlay
+  theme: dark
+  background_image: 
+    src: /assets/images/cover/IMG_2110.JPG
 ---
+
+Notes of IIIS *Computer Architecture* course, Spring 2022, taught by Prof. Mingyu Gao. <!--more-->
 
 ## 01: basic concepts
 
 Von Neumann Architecture: separate processor/memory
 
 Code Compilation & Translation:
-High-level(\*.c) -> Assembly(\*.s) -> Machine object(\*.o) -> executable <!--more-->
+High-level(\*.c) -> Assembly(\*.s) -> Machine object(\*.o) -> executable
 
 Processors: realizes ISA (RISC vs CISC)
 

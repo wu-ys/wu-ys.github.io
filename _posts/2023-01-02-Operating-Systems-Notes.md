@@ -6,13 +6,15 @@ mathjax: true
 excerpt_type: html
 ---
 
+Notes of IIIS *Operation Systems and Distributed Systems* course, Autumn 2022, taught by Prof. Wei Xu. <!--more-->
+
 - Real-world coding
 - performance, scalability, fault tolerance, cooperate
 
 - How to evaluate a system?
 
 - How to solve the above challenges? **Engineering** Principles ot system design.
-  - Learn how existing systems work?
+  - Learn how existing systems work? <!--more-->
 
 Challenges for modern system design:
 
@@ -22,7 +24,7 @@ Challenges for modern system design:
 - Software Complexity
 - Less qualified programmers
 
-- Internet Scale: $>1$ billion hosts <!--more-->
+- Internet Scale: $>1$ billion Hosts
 
 ## 1 OS Overview
 

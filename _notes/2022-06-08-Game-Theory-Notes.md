@@ -6,6 +6,8 @@ mathjax: true
 excerpt_type: html
 ---
 
+Notes of IIIS *Game Theory* course, Spring 2022, taught by Prof. Zhixuan Fang. <!--more-->
+
 ## Lecture 1: Introduction
 
 First part (Basic concepts)
@@ -18,7 +20,7 @@ Second Part (Advanced topics)
 
 - Bayesian Game
 - Mechanism Design
-- Various Game Models <!--more-->
+- Various Game Models
 
 Examples of Games
 
