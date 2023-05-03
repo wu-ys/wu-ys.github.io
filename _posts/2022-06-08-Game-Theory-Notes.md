@@ -169,7 +169,7 @@ $$
 p \succeq p' \Leftrightarrow \sum_{i=1}^n u_ip_i \ge \sum_{i=1}^n u_ip_i'
 $$
 
-- Suppose that $U : P → R$ is a VNM expected utility function for the preference relation $\succeq$ on $\mathcal{P}$. Then $V : P → R$ is another VNM utility function for $\succeq$ if and only if there are scalar $a$ and scalar $b > 0$ such that $V (p) = a + b U(p)$ for all $p \in P$.
+- Suppose that $U : P \to R$ is a VNM expected utility function for the preference relation $\succeq$ on $\mathcal{P}$. Then $V : P \to R$ is another VNM utility function for $\succeq$ if and only if there are scalar $a$ and scalar $b > 0$ such that $V (p) = a + b U(p)$ for all $p \in P$.
 
 ### Risk Aversion
 
@@ -185,7 +185,11 @@ Define $δ_x$ to be a degenerate lottery that gives $x$ for certain, and $E(p)$ 
 
 ### Strategic Form Game
 
-*Def.* **(Strategic Form Game/Normal Form Game)** A triplet $G = \{\mathcal{I}, (S_i)_{i\in \mathcal{I}}, (u_i)_{i\in\mathcal{I} }\}$ s.t.
+*Def.* **(Strategic Form Game/Normal Form Game)** A triplet
+$$
+G = \{\mathcal{I}, (S_i)_{i\in \mathcal{I}}, (u_i)_{i\in\mathcal{I} }\}
+$$
+s.t.
 
 - $\mathcal{I}$ is a finite set of **players**
 - The **pure-strategy space** $S_i$ is the set of available actions for player $i$
@@ -193,8 +197,12 @@ Define $δ_x$ to be a degenerate lottery that gives $x$ for certain, and $E(p)$ 
   - $u_i(s)$ is player $i$'s VNM utility function for each profile $s=(s_1,s_2,\cdots,s_I)$ of strategies for all players.
 - Simultaneous-move, One-shot
 - In addition, denote $-i$ as all players except $i$, that is, player $i$'s opponent.
-  - $s_{-i} = \{s_j\}_{j\ne i}, S_{-i} = \prod_{j\ne i}S_j, s = (s_1,s_2,\cdots,s_I) = (s_i,s_{-i})$
-- Common knowledge: Every agents kows all other agent's actions, utilities, and that everyone is rational. And (everyone knows)^k^ everyone knows it.
+
+$$
+s_{-i} = \{s_j\}_{j\ne i}, S_{-i} = \prod_{j\ne i}S_j, s = (s_1,s_2,\cdots,s_I) = (s_i,s_{-i})
+$$
+
+- Common knowledge: Every agents kows all other agent's actions, utilities, and that everyone is rational. And (everyone knows)^k everyone knows it.
 
 ### Dominant Strategy
 
@@ -248,22 +256,22 @@ $$
   u_i(\sigma_i) = \int_Su_i(s) d\sigma(s)
   $$
 
-- We define the support of a mixed strategy $σ_i$ as:
+- We define the support of a mixed strategy $\sigma_i$ as:
   $$
-  \text{support}(σ) = \{s_i ∈ S_i : σ_i(s_i) > 0\}
+  \text{support}(\sigma) = \{s_i \in S_i : \sigma_i(s_i) > 0\}
   $$
 
-*Def.* **(Mixed Strategy Nash Equilibruim)** A mixed strategy profile $σ^\ast$ is a (mixed strategy) Nash equilibrium if for every player $i$​,
+*Def.* **(Mixed Strategy Nash Equilibruim)** A mixed strategy profile $\sigma^\ast$ is a (mixed strategy) Nash equilibrium if for every player $i$​,
 $$
 u_i(\sigma_i^\ast, \sigma_{-i}^\ast) \ge u_i(\sigma_i', \sigma_{-i}^\ast), \forall \sigma_i' \in \Sigma_i
 $$
 
-- *Prop.* A mixed strategy profile $σ^∗$ is a Nash equilibrium iff for each player $i ∈ I$, every pure strategy in the support of $σ^∗_i$ is a best response to $\sigma^\ast_{-i}$.
-- *Prop.* If $σ^∗$ is a Nash equilibrium, every pure strategy in the support of $σ^∗_i$ yields the same payoff.
+- *Prop.* A mixed strategy profile $\sigma^\ast$ is a Nash equilibrium iff for each player $i \in I$, every pure strategy in the support of $\sigma^\ast_i$ is a best response to $\sigma^\ast_{-i}$.
+- *Prop.* If $\sigma^\ast$ is a Nash equilibrium, every pure strategy in the support of $\sigma^\ast_i$ yields the same payoff.
 
 ### Iterative Elimination of Strictly Dominated Strategies with Mixed Strategy (ISD or IESDS)
 
-*Def.* A pure strategy $s_i$ is **strictly dominated** if there exists a mixed strategy $σ_i' ∈ Σ_i$ such that $u_i(σ_i' , s_{−i}) > u_i(s_i , s_{−i})$ for all $s_{−i} ∈ S_{−i}$ . It is equivalent to check $u_i(σ_i , σ_{−i}) > u_i(s_i , σ_{−i})$ for all $σ_{−i} ∈ Σ_{−i}$.
+*Def.* A pure strategy $s_i$ is **strictly dominated** if there exists a mixed strategy $\sigma_i' \in \sigma_i$ such that $u_i(\sigma_i' , s_{−i}) > u_i(s_i , s_{−i})$ for all $s_{−i} \in S_{−i}$ . It is equivalent to check $u_i(\sigma_i , \sigma_{−i}) > u_i(s_i , \sigma_{−i})$ for all $\sigma_{−i} \in \sigma_{−i}$.
 
 In each step, we consider eliminate all dominated strategies.
 
@@ -273,7 +281,7 @@ In each step, we consider eliminate all dominated strategies.
 
 - Ingeneral, "social welfare" is hard to define since payoff for different players can't be compared.
 
-*Def.* **(Pareto dominance)** A strategy profile $s$ Pareto dominates $s_0$ if $∀i ∈ I$, $u_i(s) ≥ u_i(s_0 )$, and $∃i ∈ I$, $u_i(s) > u_i(s_0 )$. Intuitionally, no one's payoff gets worse and someone's gets better.
+*Def.* **(Pareto dominance)** A strategy profile $s$ Pareto dominates $s_0$ if $∀i \in I$, $u_i(s) ≥ u_i(s_0 )$, and $∃i \in I$, $u_i(s) > u_i(s_0 )$. Intuitionally, no one's payoff gets worse and someone's gets better.
 
 A strategy profile $s$ is **Pareto optimal** if it is not Pareto dominated.
 
@@ -287,15 +295,15 @@ A strategy profile $s$ is **Pareto optimal** if it is not Pareto dominated.
 Iterated elimination of strictly dominated strategy tells us what a player would NOT DO. But what would a player DO?
 A player will response to what he thinks other will do.
 
-*Def.* **(Belief)** A belief $µ_i$ of player $i$ about the other player’s strategies is a probability measure on $σ_{−i} ∈ Π_{j\ne i}Σj$ . A rational player plays best response to his belief.
+*Def.* **(Belief)** A belief $µ_i$ of player $i$ about the other player’s strategies is a probability measure on $\sigma_{−i} \in \pi_{j\ne i}\sigmaj$ . A rational player plays best response to his belief.
 
-*Def.*  **(Never-best response)** A pure strategy $s_i$ is a never-best response if for all beliefs $σ_{−i}$ , there exists $σ_i ∈ Σ_i$ such that
+*Def.*  **(Never-best response)** A pure strategy $s_i$ is a never-best response if for all beliefs $\sigma_{−i}$ , there exists $\sigma_i \in \sigma_i$ such that
 $$
-u_i(σ_i , σ_{−i}) > u_i(s_i , σ_{−i})
+u_i(\sigma_i , \sigma_{−i}) > u_i(s_i , \sigma_{−i})
 $$
 A strictly dominated strategy is a never-best response, but the inverse may not true.
 
-*Def.* **(Rationalizable strategies)** $R^∞_i$, which contains all strategies that survive iterative elimination of never-best response, is the set of rationalizable strategies.
+*Def.* **(Rationalizable strategies)** $R^\infty_i$, which contains all strategies that survive iterative elimination of never-best response, is the set of rationalizable strategies.
 
 - A strictly dominated strategy will not be rationalized.
 - Thus, set of rationalizable strategies represent a further refinement of the strategy beyond iterated strict dominance.
@@ -306,16 +314,16 @@ A strictly dominated strategy is a never-best response, but the inverse may not 
 *Remark.* (1) This doesn't hold for multi-player games
 (2) Only need to show a never-best pure strategy is always strivtly dominated.
 
-*Thm6.* **(Supporting Hyperplane Theorem)** Let $C$ be a nonempty convex subset of $\mathbb{R}^n$ and let $x_0$ be a vector in $\mathbb{R}^n$ . If $x_0$ is not an interior point of $C$, there exists a hyperplane that passes through $x_0$ and contains $C$ in one of its closed halfspaces, i.e., there exists a vector $\vec a ∈ \mathbb{R}^n$ , $\vec a \ne 0$ s.t.
+*Thm6.* **(Supporting Hyperplane Theorem)** Let $C$ be a nonempty convex subset of $\mathbb{R}^n$ and let $x_0$ be a vector in $\mathbb{R}^n$ . If $x_0$ is not an interior point of $C$, there exists a hyperplane that passes through $x_0$ and contains $C$ in one of its closed halfspaces, i.e., there exists a vector $\vec a \in \mathbb{R}^n$ , $\vec a \ne 0$ s.t.
 $$
-a^T x_0 ≥ a^T x, ∀x ∈ C.
+a^T x_0 ≥ a^T x, ∀x \in C.
 $$
 
 ### Correlated Equilibrium
 
-*Def.* **(Correlated Equilibrium)** A correlated equilibrium of a finite game is a joint probability distribution $p$ over $∆(S)$ such that
+*Def.* **(Correlated Equilibrium)** A correlated equilibrium of a finite game is a joint probability distribution $p$ over $\Delta(S)$ such that
 $$
-\sum_{s_{−i}∈S_{−i}} p(s_{−i} | s_i)u_i(s_i , s_{−i}) ≥ \sum_{s_{−i}∈S_{−i}} p(s_{−i} | s_i)u_i(s_i' , s_{−i}), ∀s_i' ∈ S_i .
+\sum_{s_{−i}\inS_{−i}} p(s_{−i} \vert s_i)u_i(s_i , s_{−i}) ≥ \sum_{s_{−i}\inS_{−i}} p(s_{−i} \vert s_i)u_i(s_i' , s_{−i}), ∀s_i' \in S_i .
 $$
 for every player $i$ and every $s_i$ with $p(s_i) > 0$.
 
@@ -354,9 +362,9 @@ $$
 
 *Lemma.* **(Sperner's Lemma)** Consider a triangle $T$ with vertices $v_1, v_2, v_3$. Let $T$ be a triangulation of $T$ and and $V (T )$ denote its set of vertices. Consider any coloring of $V (T )$ with $\{0, 1, 2\}$ such that
 
-1. $v_i$ is colored with $i (i ∈ \{0, 1, 2\})$.
+1. $v_i$ is colored with $i (i \in \{0, 1, 2\})$.
 
-2. If $v ∈ V (T )$ lies on the line joining vertices $v_i,v_j$ colored in $i, j ∈ \{0, 1, 2\}$, the color of $v$ is either $i$ or $j$. Then, there exists at least one trianle in $T$ whose vertices are colored by all three colors, i.e., a tri-chromatic triangle.
+2. If $v \in V (T )$ lies on the line joining vertices $v_i,v_j$ colored in $i, j \in \{0, 1, 2\}$, the color of $v$ is either $i$ or $j$. Then, there exists at least one trianle in $T$ whose vertices are colored by all three colors, i.e., a tri-chromatic triangle.
 
 *Remark.*
 
@@ -365,31 +373,35 @@ $$
 
 *proof.* Routing
 
-*Thm.* **(Kakutani)** Let $φ$ be a correspondence on set $S$, with $x ∈ S →^φ φ(x) ⊆ S$. Suppose we have the following conditions:
+*Thm.* **(Kakutani)** Let $φ$ be a correspondence on set $S$, with $x \in S \to^φ φ(x) ⊆ S$. Suppose we have the following conditions:
 
 - $S$ is a non-empty, compact and convex subset of Euclidean space $\mathbb{R}^n$.
-- $φ(x)$ is non-empty and convex-valued for all $x ∈ S$. That is, $\phi(x)$ is a convex set for all $x$.
+- $φ(x)$ is non-empty and convex-valued for all $x \in S$. That is, $\phi(x)$ is a convex set for all $x$.
 - $φ$ has a closed graph. That is, $\{(x,y): y \in\phi(x)\}$ is a closed set.
 
-Then $φ$ has a fixed point. That is, there exists some $x ∈ S$ such that $x ∈ φ(x)$.
+Then $φ$ has a fixed point. That is, there exists some $x \in S$ such that $x \in φ(x)$.
 
 ### Proof via Kakutani's Theorem
 
 - Recall the definition of best response
   $$
-  BR_i(σ_{−i}) = \{σ_i : \arg \max σ_i∈Σ_i u_i(σ_i , σ_{−i})\}
+  BR_i(\sigma_{−i}) = \{\sigma_i : \arg \max \sigma_i\in\sigma_i u_i(\sigma_i , \sigma_{−i})\}
   $$
 
-- Define the correspondence as $BR(σ) = \{σ' : σ_i' ∈ BRi(σ_{−i})\}, ∀i.$
-- (Nash 1950) The idea is to apply Kakutani’s fixed point theorem to the best-response correspondence $BR(σ) : Σ φ→ Σ$.
-- $Σ$ is compact and non-empty.
-- BR(σ) is non-empty and convex-valued.
-- BR(σ) has a closed graph.
+- Define the correspondence as $BR(\sigma) = \{\sigma' : \sigma_i' \in BRi(\sigma_{−i})\}, ∀i.$
+- (Nash 1950) The idea is to apply Kakutani’s fixed point theorem to the best-response correspondence $BR(\sigma) : \sigma φ\to \sigma$.
+- $\sigma$ is compact and non-empty.
+- BR(\sigma) is non-empty and convex-valued.
+- BR(\sigma) has a closed graph.
 - Thus a fixed point exists, and the fixed point is a Nash equilibrium.
 
 ### More Existence Examples
 
-*Thm.* (D-G-F) For a strategic game $G = \{\mathcal{I},(S_i)_{i∈\mathcal{I}},(u_i)_{i∈\mathcal{I}}\}$. If
+*Thm.* (D-G-F) For a strategic game
+$$
+G = \{\mathcal{I},(S_i)_{i\in\mathcal{I}},(u_i)_{i\in\mathcal{I}}\}
+$$.
+If
 
 - $I$ is a finite set;
 - $S_i$ is compact and convex;
@@ -404,7 +416,7 @@ d(T(x),T(y)) \le \beta d(x,y)
 $$
 (Lipcshitz condition)
 
-*Thm.* **(Contration Mapping Theorem)** Let $(X, d)$ be a non-empty complete metric space, then any contraction $f : X → X$ has a unique fixed point.
+*Thm.* **(Contration Mapping Theorem)** Let $(X, d)$ be a non-empty complete metric space, then any contraction $f : X \to X$ has a unique fixed point.
 
 *Thm.* If the best response mapping is a contraction on the entire strategy space, then there is a unique NE in the game.
 
@@ -416,9 +428,9 @@ $$
 
 - A pot of money, with initial amount of \$4.
 - Two players take turns. The pot gains \$1 in each turn.
-- At each player’s turn and the pot has \$ p, the player can choose to split the money, take the share of \$ $\lfloor\dfrac{p+4}{2}\rfloor$  and leaves the rest to the other. By doing this, the game ends.
+- At each player’s turn and the pot has p, the player can choose to split the money, take the share of $\lfloor\dfrac{p+4}{2}\rfloor$ and leaves the rest to the other. By doing this, the game ends.
 - Or, the player can choose to do nothing and pass his turn.
-- When the pot reaches \$ 10, two players split evenly and end the game.
+- When the pot reaches \$10, two players split evenly and end the game.
 
 *Extensive Form Game*: proposed to analyze dynamic games
 
@@ -455,36 +467,36 @@ We exclude loops and multiple roots. Each non-toor node has exactly one immediat
 
 **Imformation set**: An information set $h$ of player $i$ are the inner nodes of the game tree.
 
-- All information sets $h ∈ H$ partitions the game tree, i.e., every node is in exactly one information set.
+- All information sets $h \in H$ partitions the game tree, i.e., every node is in exactly one information set.
 - For an information set $h_i$ of player $i$:
-  - player $i$ makes the move for any state $u ∈ h_i$ ,
-  - available actions for any $u, v ∈ h$ are the same,
-  - given any $u, v ∈ h_i$ , player $i$ cannot distinguish which state he is currently at.
+  - player $i$ makes the move for any state $u \in h_i$ ,
+  - available actions for any $u, v \in h$ are the same,
+  - given any $u, v \in h_i$ , player $i$ cannot distinguish which state he is currently at.
 
 - When making decisions, the player knows which information set he's in, but he doesn't know which exactly state he's in.
 - Game of perfection information is the special case when all information sets are singletons.
 - Perfect recall rules out the possibility that $u$ is the predecessor of $v$ while they are in the same information set.
 
-Let $H_i$ be the set of player $i$’s information sets, and let $A_i = ∪_{h_i∈H_i}A(h_i)$ be the set of all actions for player $i$:
+Let $H_i$ be the set of player $i$’s information sets, and let $A_i = ∪_{h_i\inH_i}A(h_i)$ be the set of all actions for player $i$:
 
-*Def 1.* A **pure strategy** for player $i$ is a map $s_i : H_i → A_i$ such that $s_i(h) ∈ A(h)$ for all $h ∈ H_i$ .
+*Def 1.* A **pure strategy** for player $i$ is a map $s_i : H_i \to A_i$ such that $s_i(h) \in A(h)$ for all $h \in H_i$ .
 
 ### Turning into Normal Form
 
 Turnning extensive form into normal form is like every player plans the game ahead and chooses a strategy at the beginning simultaneously. The path of play is just the implementation of the chose strategies.
 
-*Def 2.* A **mixed strategy** $σ_i$ of a player $i$ in an extensive form game is a distribution over pure strategies, i.e.,
+*Def 2.* A **mixed strategy** $\sigma_i$ of a player $i$ in an extensive form game is a distribution over pure strategies, i.e.,
 $$
-σ_i ∈ ∆S_i = ∆ \left(\prod_{h∈H_i} A(h) \right) .
+\sigma_i \in \DeltaS_i = \Delta \left(\prod_{h\inH_i} A(h) \right) .
 $$
 Meanwhile, we can define the behavioral strategies for extensive form games. The behavioral strategy specifies a probability distribution over actions at each hi , and the probabilities at different information sets are independent.
 
 *Def 3.* **(Behavioral strategy)** A behavioral strategy $b_i$​ of player $i$​ is a product distribution on actions $A_i$​ at each information set $h$:
 $$
-b_i ∈ \prod_{h∈H_i} ∆(A(h)).
+b_i \in \prod_{h\inH_i} \Delta(A(h)).
 $$
 
-*Def 4.* **(Realization Equivalence)** Two strategies $σ_i$ and $σ_i'$ for player $i$ in an extensive form game are **realization equivalent** if for each strategy $σ_{−i}$ of the opponents and every node $v$ in the game tree, the probability of reaching $v$ when $(σ_i , σ_{−i})$ is employed is the same as when $(σ_i' , σ_{−i})$ is employed.
+*Def 4.* **(Realization Equivalence)** Two strategies $\sigma_i$ and $\sigma_i'$ for player $i$ in an extensive form game are **realization equivalent** if for each strategy $\sigma_{−i}$ of the opponents and every node $v$ in the game tree, the probability of reaching $v$ when $(\sigma_i , \sigma_{−i})$ is employed is the same as when $(\sigma_i' , \sigma_{−i})$ is employed.
 
 - It is enough to verify realization-equivalence for opponent strategy profiles that are pure
 - The intuition is that two strategies gives the same distributions on outcomes.
@@ -528,11 +540,11 @@ Stackelberg game: leader and follower.
 
 Formally speaking, a Stackelberg game consists of a leader (l) and a follower (f). The objective of the follower is to choose her strategy to best response the leader:
 $$
-BR(σ_l) = \arg \max_{σ_f ∈∆_f} u_f (σ_l , σ_f ).
+BR(\sigma_l) = \arg \max_{\sigma_f \in\Delta_f} u_f (\sigma_l , \sigma_f ).
 $$
  The goal of the leader can be represented as follows.
 $$
-\max _{σ_l∈∆_l} u_l(σ_l , σ_f ) \text{ s.t. }σ_f ∈ BR(σ_l).
+\max_{\sigma_l\in\Delta_l} u_l(\sigma_l , \sigma_f ) \text{ s.t. }\sigma_f \in BR(\sigma_l).
 $$
 
 - Any problem in this optimization? $BR(\sigma_l)$ may be a set value function.
@@ -558,20 +570,20 @@ It could be too cumbersome (exponentially increasing) to construct game tree to 
 
 Denote $A_i(h^{k+1})$ as player i's possible actions in stage $k+1$ with history $h^{k+1}$.
 
-*Thm 6.* In a finite multi-stage game with observed actions, strategy profile $σ$ is **subgame perfect** if and only if it satisfies the **one-shot deviation condition**, i.e., there is no player $i$ and no strategy $\hat σ_i$ that agrees with $σ_i$ except at a single stage $t$ and history $h^t$, and that $\hat σ_i$ is a better response to $σ_{−i}$ than $σ_i$ at history $h^t$.
+*Thm 6.* In a finite multi-stage game with observed actions, strategy profile $\sigma$ is **subgame perfect** if and only if it satisfies the **one-shot deviation condition**, i.e., there is no player $i$ and no strategy $\hat \sigma_i$ that agrees with $\sigma_i$ except at a single stage $t$ and history $h^t$, and that $\hat \sigma_i$ is a better response to $\sigma_{−i}$ than $\sigma_i$ at history $h^t$.
 
 ### Infinite Game
 
 Some multi-stage games could contain infinite stages.
 For example, consider an infinite game with discounted payoff, where player i’s payoff is of the form:
 $$
-u_i(σ_i , σ_{−i}) = u_{i0}(σ_{i} , σ_{−i}) + γu_{i1}(σ_i , σ_{−i}) + γ^2u_{i2}(σ_i , σ_{−i}) + ...
+u_i(\sigma_i , \sigma_{−i}) = u_{i0}(\sigma_{i} , \sigma_{−i}) + γu_{i1}(\sigma_i , \sigma_{−i}) + γ^2u_{i2}(\sigma_i , \sigma_{−i}) + ...
 $$
- Interpretation of discount factor $γ ∈ [0, 1]$: interest rate.
+ Interpretation of discount factor $γ \in [0, 1]$: interest rate.
 
-*Def 7.* An infinite extensive form game $G$ is **continuous** at $∞$ if for any two strategies $σ$ and $σ'$ such that $σ(h) = σ' (h)$ for all histories $h$ in stages $t ≤ T$​, the payoff function $u_i$ satisfies
+*Def 7.* An infinite extensive form game $G$ is **continuous** at $\infty$ if for any two strategies $\sigma$ and $\sigma'$ such that $\sigma(h) = \sigma' (h)$ for all histories $h$ in stages $t ≤ T$​, the payoff function $u_i$ satisfies
 $$
-\lim_{T→∞} \sup_{i,σ,σ'} | u_i(σ) − u_i(σ') |  = 0.
+\lim_{T\to\infty} \sup_{i,\sigma,\sigma'} | u_i(\sigma) − u_i(\sigma') |  = 0.
 $$
 
 - Intuition: compare the payoffs of two strategies which are identical for all information sets up to stage $T$ and could be different thereafter. As $T$ becomes infinitely large, the maximal difference between any two such strategies becomes arbitrarily small.
@@ -589,7 +601,19 @@ $$
 
 Bargaining (Rubinstein's model): Recursion Structure
 
-*Def.* **(Repeated Games)** We study the repeated strategic form game $G = \{I, \{A_i\}_{i\in\mathcal{I}}, \{g_i\}_{i\in\mathcal{I}}\}$ for $T$ periods. Denote the repeated game as $G^T$. Payoff of player i at stage t: $g_i(a^t_i , a^t_{−i} )$, where $a^t = (a^t_i , a^t_{−i} )$ is the action profile at period t.
+*Def.* **(Repeated Games)** We study the repeated strategic form game
+$$
+G = \{I, \{A_i\}_{i\in\mathcal{I}}, \{g_i\}_{i\in\mathcal{I}}\}
+$$
+for $T$ periods. Denote the repeated game as $G^T$. Payoff of player i at stage t:
+$$
+g_i(a^t_i , a^t_{−i} )
+$$
+, where
+$$
+a^t = (a^t_i , a^t_{−i} )
+$$
+is the action profile at period t.
 
 Example: Discounted Payoff
 
@@ -626,7 +650,7 @@ Here $\bar a$ is the implicitly agreed action profile and $\underline{a}_i$ is t
 
 *Def.* Set of **feasible payoffs** is defined as:
 $$
-V = Conv\{v ∈ R^I | \text{ there exists } a ∈ A \text{ s.t. } g(a) = v.\}
+V = Conv\{v \in R^I | \text{ there exists } a \in A \text{ s.t. } g(a) = v.\}
 $$
 *Def.* Player i’s **minmax payoff** is the the lowest payoff that player i’s opponent can hold him to:
 $$
@@ -643,7 +667,7 @@ $$
 
 *Prop.* Individual rationality (IR): In any Nash equilibrium, player i must receive at least $v_i$ .
 
-*Thm.* **(Nash Folk Theorem)** If $(v_1, ..., v_I )$ is feasible and strictly individual rational, then there exists $\underline{δ} < 1$ such that for all $δ ≥ \underline{δ}$, there is a Nash equilibrium of $G^∞(δ)$ with payoffs $(v_1,\cdots,v_I)/(1 − δ)$.
+*Thm.* **(Nash Folk Theorem)** If $(v_1, ..., v_I )$ is feasible and strictly individual rational, then there exists $\underline{δ} < 1$ such that for all $δ ≥ \underline{δ}$, there is a Nash equilibrium of $G^\infty(δ)$ with payoffs $(v_1,\cdots,v_I)/(1 − δ)$.
 
 - *proof.* Assume there exists a profile $a = (a_1, ..., a_I )$ such that $g_i(a) = v_i,\forall i$. Consider the following strategies:
 
@@ -651,7 +675,7 @@ $$
 
   - If some player $j$ deviates, play $m_i^j$ thereafter (minmax strategy against $j$).
 
-*Thm.* **(Friedman)** Let $a^{NE}$ be a static equilibrium of the stage game with payoffs $e^{NE}$ . For any feasible payoff $v$ with $v_i > e^{NE}_i,\forall i ∈ I$, there exists some $δ < 1$ s.t. $\forall δ ≥ \underline{δ}$, there exists a SPE of $G^∞(δ)$ with payoffs $v$.
+*Thm.* **(Friedman)** Let $a^{NE}$ be a static equilibrium of the stage game with payoffs $e^{NE}$ . For any feasible payoff $v$ with $v_i > e^{NE}_i,\forall i \in I$, there exists some $δ < 1$ s.t. $\forall δ ≥ \underline{δ}$, there exists a SPE of $G^\infty(δ)$ with payoffs $v$.
 
 ## Lecture 9: Two-player Zero-sum game
 
@@ -659,24 +683,24 @@ $$
 
 Payoff matrix: row player $R$, column player $C = -R$.
 
-Denote the simplex of available mixed strategies of row player by $∆_m$ (and $∆_n$​ for the column player)
+Denote the simplex of available mixed strategies of row player by $\Delta_m$ (and $\Delta_n$​ for the column player)
 $$
-∆_m =
-\{x ∈ \mathbb{R}^m : x_i ≥ 0,\sum_{i=1}^m x_i = 1\},
-∆_n =
-\{y ∈ \mathbb{R}^n : y_i ≥ 0,\sum^n_{j=1} y_j = 1\}.
+\Delta_m =
+\{x \in \mathbb{R}^m : x_i ≥ 0,\sum_{i=1}^m x_i = 1\},
+\Delta_n =
+\{y \in \mathbb{R}^n : y_i ≥ 0,\sum^n_{j=1} y_j = 1\}.
 $$
-Given a pair of mixed strategy $x ∈ ∆_m$ and $y ∈ ∆_n$, the expected payoff of the row and column player are $x^T Ry$ and $x^TCy$, respectively.
+Given a pair of mixed strategy $x \in \Delta_m$ and $y \in \Delta_n$, the expected payoff of the row and column player are $x^T Ry$ and $x^TCy$, respectively.
 
 ### Example: Conservative players
 
 *Thm 1.* **(Von Neumann’s Minimax Theorem)** For any two-player zero-sum game with $m × n$ payoff matrices $R$, $C$, there is a number $z$, called the **value of the game**, satisfying
 $$
-\max_{x∈∆_m} \min_{y∈∆_n} x^T Ry = z = \min_{ y∈∆_n} \max_{ x∈∆_m} x^T Ry
+\max_{x\in\Delta_m} \min_{y\in\Delta_n} x^T Ry = z = \min_{ y\in\Delta_n} \max_{ x\in\Delta_m} x^T Ry
 $$
-*Def.* **(Saddle point)** A saddle point of a payoff matrix R is a pair $(i^∗ , j^∗)$ such that:
+*Def.* **(Saddle point)** A saddle point of a payoff matrix R is a pair $(i^\ast , j^\ast)$ such that:
 $$
-\max_i R_{ij^∗} = R_{i^∗j^\ast} = \min_j R_{i^∗j}
+\max_i R_{ij^\ast} = R_{i^\astj^\ast} = \min_j R_{i^\astj}
 $$
 
 - Saddle point $\Leftrightarrow$ pure strategy Nash equilibrium.
@@ -687,19 +711,19 @@ $$
 
 ​ *Proof1.* It's obvious that
 $$
-\max_{x∈∆_m} \min_{y∈∆_n} x^T Ry \le \min_{ y∈∆_n} \max_{ x∈∆_m} x^T Ry
+\max_{x\in\Delta_m} \min_{y\in\Delta_n} x^T Ry \le \min_{ y\in\Delta_n} \max_{ x\in\Delta_m} x^T Ry
 $$
 ​ So we only need to show the opposite inequality. Suppose that
 $$
-\min_{y∈∆n} \max_{x∈∆m} x^T Ry > λ.
+\min_{y\in\Deltan} \max_{x\in\Deltam} x^T Ry > \lambda.
 $$
 ​ Define a new game with payoff matrix $\hat R$ given by $\hat R_{ij} = R_{ij} − \lambda$. So we have LHS of the left part is $>0$.
 
-​ Construct set $K$ of all vectors which dominate some gain vector $\hat R y ∈ \mathbb{R}^m$:
+​ Construct set $K$ of all vectors which dominate some gain vector $\hat R y \in \mathbb{R}^m$:
 $$
 K = \{\hat R y + v : y \in \Delta_n, v \in \mathbb{R}^m, v ≥ 0\}.
 $$
-​ Set $K$ is convex and closed (check $\Delta_n$ and $v$). Thus according to the Separating Hyperplane Theorem, there exists $z ∈ R$ and $c > 0$ such that $z^T w > c > 0$ for all $w ∈ K$. That is,
+​ Set $K$ is convex and closed (check $\Delta_n$ and $v$). Thus according to the Separating Hyperplane Theorem, there exists $z \in R$ and $c > 0$ such that $z^T w > c > 0$ for all $w \in K$. That is,
 $$
 z^T(\hat Ry + v) > c > 0 \text{ for all }y \in \Delta_n \text{ and }v \ge 0.
 $$
@@ -724,14 +748,14 @@ $$
 
 *Def.* **(Lagrangian dual function)** The Lagrangian dual function $g : \mathbb{R}^m × \mathbb{R}^p \to \mathbb{R}$ is defined as the minimum value of the Lagrangian function over x:
 $$
-g(λ, ν) = \inf_x L(x, λ, ν) = \inf_x \left( f(x) + \sum^m_{i=1} λ_if_i(x) + \sum^p_{i=1} ν_ih_i(x)\right)
+g(\lambda, \nu) = \inf_x L(x, \lambda, \nu) = \inf_x \left( f(x) + \sum^m_{i=1} \lambda_if_i(x) + \sum^p_{i=1} \nu_ih_i(x)\right)
 $$
 
-- The dual function $g(λ)$ is always concave even if the primal problem is not convex.
-- Weak duality: Given any $λ ≥ 0$, the dual function $g(λ, ν)$ yields a lower bound of the optimal primal objective value $f(x^∗ )$.
+- The dual function $g(\lambda)$ is always concave even if the primal problem is not convex.
+- Weak duality: Given any $\lambda ≥ 0$, the dual function $g(\lambda, \nu)$ yields a lower bound of the optimal primal objective value $f(x^\ast )$.
 
 $$
-g(λ, ν) ≤ f(x^∗), \forall \lambda ≥ 0.
+g(\lambda, \nu) ≤ f(x^\ast), \forall \lambda ≥ 0.
 $$
 
 - Strong duality holds if $d^\ast= p^\ast$.
@@ -761,7 +785,7 @@ $$
 
 In every round, each player plays a best response to the opponent’s historical strategy:
 $$
-i_t ∈ \arg \max_i\left[e_i^T R \left(\frac{1}{t-1} \sum_{\tau < t}e_\tau\right) \right], j_t ∈ \arg \max_j\left[\left(\frac{1}{t-1} \sum_{\tau < t}e_\tau\right)^TC e_j\right]
+i_t \in \arg \max_i\left[e_i^T R \left(\frac{1}{t-1} \sum_{\tau < t}e_\tau\right) \right], j_t \in \arg \max_j\left[\left(\frac{1}{t-1} \sum_{\tau < t}e_\tau\right)^TC e_j\right]
 $$
 *Thm.* If the players of a zero-sum game $(R, C)$ interact via fictitious play, then  
 $$
@@ -814,23 +838,23 @@ A Bayesian game consists of
 
 - A set of players $\mathcal{I}$;
 - A set of actions (pure strategies) for each player i: $S_i$ ;
-- A set of types for each player i : $θ_i ∈ Θ_i$ ;
-- A payoff function for each player i : $u_i(s_1, \cdots, s_I , θ_1, \cdots, θ_I )$ (can be extended to mixed strategy);
-- A (joint) probability distribution $p(θ_1, \cdots, θ_I )$ over types (or $P(θ_1, \cdots, θ_I )$ when types are not finite). **(Common Knowledge)**
+- A set of types for each player i : $\theta_i \in \theta_i$ ;
+- A payoff function for each player i : $u_i(s_1, \cdots, s_I , \theta_1, \cdots, \theta_I )$ (can be extended to mixed strategy);
+- A (joint) probability distribution $p(\theta_1, \cdots, \theta_I )$ over types (or $P(\theta_1, \cdots, \theta_I )$ when types are not finite). **(Common Knowledge)**
 
-Bayesian: Given $p(θ_1, \cdots, θ_I )$, player $i$ can infer the conditional distribution $p(θ_{−i} | θ_i)$ by **Bayes rule**.
+Bayesian: Given $p(\theta_1, \cdots, \theta_I )$, player $i$ can infer the conditional distribution $p(\theta_{−i} \vert \theta_i)$ by **Bayes rule**.
 
 *Def. (Harsanyi's transformation)* Games of imcomplete information can be thought as games of complete but imperfect information. In this game, natural makes his first move secretly, which chooses the r.v. $(\theta_1,\theta_2,\cdots,\theta_n)$, and only informs player $i$ of $\theta_i$.
 
 ### Strategy and Expected payoff
 
-Since the payoff, types and prior distributions are common knowledge, we can compute the expected payoffs of player $i$ of type $θ_i$ as (when types are finite):
+Since the payoff, types and prior distributions are common knowledge, we can compute the expected payoffs of player $i$ of type $\theta_i$ as (when types are finite):
 $$
-U_i(σ_i' , σ_{−i} , θ_i) = \sum_{θ_{−i}} p(θ_{−i} | θ_i)u_i(σ_{i}' , σ_{−i}(θ_{−i}), θ_i , θ_{−i})
+U_i(\sigma_i' , \sigma_{−i} , \theta_i) = \sum_{\theta_{−i}} p(\theta_{−i} | \theta_i)u_i(\sigma_{i}' , \sigma_{−i}(\theta_{−i}), \theta_i , \theta_{−i})
 $$
-*Definition 1.* The strategy profile $σ$ is a Bayesian Nash equilibrium if for all $i ∈ \mathcal{I}$ and for all $θ_i ∈ Θ_i$ , we have:
+*Definition 1.* The strategy profile $\sigma$ is a Bayesian Nash equilibrium if for all $i \in \mathcal{I}$ and for all $\theta_i \in \theta_i$ , we have:
 $$
-σ_i(θ_i) ∈ \arg \max_{σ_i'∈Σ_i} \sum_{θ_{−i}} p(θ_{−i} | θ_i)u_i(σ_i' , σ_{−i}(θ_{−i}), θ_i , θ_{−i})
+\sigma_i(\theta_i) \in \arg \max_{\sigma_i'\in\sigma_i} \sum_{\theta_{−i}} p(\theta_{−i} | \theta_i)u_i(\sigma_i' , \sigma_{−i}(\theta_{−i}), \theta_i , \theta_{−i})
 $$
 
 ### Example: Public Good I
@@ -858,9 +882,9 @@ With the same payoff matrix as in I, but $c_1,c_2$ are randomly drawn from $U(0,
 Suppose that two firms both produce at constant marginal cost. Inverse demand function is given by $P(Q)$ as in the usual Cournot.
 
 - Firm 1 has marginal cost equal to $C$ (and this is common knowledge).
-- Firm 2’s marginal cost is private information. It is equal to $C_L$ with probability $\theta$ and to $C_H$ with probability $(1 − θ)$, where $C_L < C_H$.
+- Firm 2’s marginal cost is private information. It is equal to $C_L$ with probability $\theta$ and to $C_H$ with probability $(1 − \theta)$, where $C_L < C_H$.
 
-This game has 2 players, 2 states (L and H) and the possible actions of each player are $q_i ∈ [0, ∞)$, but firm 2 has two possible types. The payoff functions of the players, after quantity choices are made, are given by
+This game has 2 players, 2 states (L and H) and the possible actions of each player are $q_i \in [0, \infty)$, but firm 2 has two possible types. The payoff functions of the players, after quantity choices are made, are given by
 $$
 u_1(q_1, q_2) =q_1(P(q_1 + q_2) − C),
 u_2((q_1, q_2), t) =q_2(P(q_1 + q_2) − C_t), t \in \{L,H\}.
@@ -874,11 +898,11 @@ Consider a first-price auction, where some risk-neutral players bid for one item
 
 - Each one observes his own valuation and decides his bid. The bidder with higher bid wins (tie breaks equally), and pay his bid Thus, the winner $i$ gets payoff $v_i − b_i$ , others get payoff $0$.
 
-- Bidder i’s strategy is $β_i : [0, \bar v] → [0, ∞]$.
+- Bidder i’s strategy is $β_i : [0, \bar v] \to [0, \infty]$.
 
 In the simple case of two players, and the valuations are drawn from $U(0,1)$. The strategy profile $(\beta_1(v_1), \beta_2(v_2)) = (\frac12 v_1, \frac12 v_2)$ is a BNE.
 
-In general cases: Consider $N$ bidders, with i.i.d. value $v_i$ in $[0,\bar v]$. Suppose that bidders $j  \ne 1$ follow the symmetric and differentiable equilibrium strategy $β$, where $β : [0, \bar v] → [0, ∞]$ is increasing and differentiable.
+In general cases: Consider $N$ bidders, with i.i.d. value $v_i$ in $[0,\bar v]$. Suppose that bidders $j  \ne 1$ follow the symmetric and differentiable equilibrium strategy $β$, where $β : [0, \bar v] \to [0, \infty]$ is increasing and differentiable.
 
 We'll then characterize $\beta$ s.t. when all other bidders play $\beta$, then it is also a best response for bidder 1:
 $$
@@ -895,11 +919,11 @@ $$
 
 ### Perfect Bayesian Equilibrium
 
-*Definition 2.* A Perfect Bayesian Equilibrium is a strategy profile $σ^∗$ together with a belief system $µ$ such that
+*Definition 2.* A Perfect Bayesian Equilibrium is a strategy profile $\sigma^\ast$ together with a belief system $µ$ such that
 
 - At every information set, strategies are optimal given beliefs and opponents’ strategies (sequential rationality).
   $$
-  σ^∗_i (h_i) ∈ \arg \max \mathbb{E}_{µ_i(x|h_i)}u_i(σ_i , σ^∗_{−i} | h, θ_i , θ_{−i})
+  \sigma^\ast_i (h_i) \in \arg \max \mathbb{E}_{µ_i(x|h_i)}u_i(\sigma_i , \sigma^\ast_{−i} | h, \theta_i , \theta_{−i})
   $$
   
 - Beliefs are always updated according to Bayes rule when applicable.
@@ -944,7 +968,8 @@ $$
 p_i = - \sum_{k\ne i} \hat v_k (\vec x_k^\ast) + h_i (\hat v_{-i}) \\
 u_i = v_i(x_i^\ast) + \sum_{k\ne j} \hat v_k(\vec x_k^\ast) - h_i(\hat v_{-i})
 $$
-here $h_i (\hat v_{-i}) = \max_{x' \in \mathcal{X}} \sum_{k \ne i} \hat v_k (\vec x_k')$. **(Clarke pivot rule) - ** Best possible income of other agents.
+here $h_i (\hat v_{-i}) = \max_{x' \in \mathcal{X}} \sum_{k \ne i} \hat v_k (\vec x_k')$.
+**(Clarke pivot rule):** Best possible income of other agents.
 
 *Prop.* Truthful, efficient, Individual rationality, no positive transfer
 
@@ -952,11 +977,11 @@ here $h_i (\hat v_{-i}) = \max_{x' \in \mathcal{X}} \sum_{k \ne i} \hat v_k (\ve
 
 ### Recall: Perfect Bayesian Equilibrium
 
-A Perfect Bayesian Equilibrium is a strategy profile $σ^∗$ together with a belief system $µ$ such that
+A Perfect Bayesian Equilibrium is a strategy profile $\sigma^\ast$ together with a belief system $µ$ such that
 
 - At every information set, strategies are optimal given beliefs and opponents’ strategies (sequential rationality).
   $$
-  σ^∗_i (h_i) ∈ \arg \max \mathbb{E}_{µ_i(x|h_i)}u_i(σ_i , σ^∗_{−i} | h, θ_i , θ_{−i})
+  \sigma^\ast_i (h_i) \in \arg \max \mathbb{E}_{µ_i(x|h_i)}u_i(\sigma_i , \sigma^\ast_{−i} | h, \theta_i , \theta_{−i})
   $$
 
 - Beliefs are always updated according to Bayes rule when applicable.
@@ -986,11 +1011,11 @@ Requirements:
 
 - PBE Requirements:
 
-  - (1) After observing $m_j$, the receiver must have a belief on $\mu(t_i | m_j)$.
+  - (1) After observing $m_j$, the receiver must have a belief on $\mu(t_i \vert m_j)$.
 
   - (2R) The receiver's action maximizes his expected utility according to his belief:
     $$
-    a^\ast(m_j) = \arg\max_{a_k\in A} \sum_{t_i\ in T} \mu(t_i | m_j) u_R(t_i,m_j,a_k)
+    a^\ast(m_j) = \arg\max_{a_k\in A} \sum_{t_i\ in T} \mu(t_i \vert m_j) u_R(t_i,m_j,a_k)
     $$
 
   - (2S) The sender's message maximizes his utility given the receiver's strategy $a^\ast(m_j)$:
@@ -1000,7 +1025,7 @@ Requirements:
 
   - (3) For each $m_j \in M$, is there exists $t_i\in T$ s.t. $m^\ast(t_i) = m_j$, then the receiver's belief at information set $m_j$ should follow the Bayes rule and sender's strategy:
     $$
-    \mu(t_i | m_j) = \frac{p(t_i)}{\sum_{t_i\in T_j} p(t_i)}
+    \mu(t_i \vert m_j) = \frac{p(t_i)}{\sum_{t_i\in T_j} p(t_i)}
     $$
     Here $T_j$ denotes the set of the types that send the message $m_j$ at equilibrium.
 
@@ -1032,9 +1057,9 @@ Desired properties:
 
 ### Arrow's Impossiblity Theorem
 
-*Thm.* Every social welfare function over a set of more than 2 candidates $(|A| \ge 3)$ that satisfies unanimity and independence of irrelevant alternatives is a **dictatorship**.
+*Thm.* Every social welfare function over a set of more than 2 candidates $(\lvert A\rvert \ge 3)$ that satisfies unanimity and independence of irrelevant alternatives is a **dictatorship**.
 
-*Lemma.* **(pairwise neutrality)** Given unanimity and IIA of $W$, let $π = (≻_1, ... ≻_n)$ and $π'= (≻_1' ,\cdots, ≻_n' )$ be two vote profiles such that for every voter i, $a ≻_i b ⇔ c ≻_i' d$. Then $a ≻ b ⇔ c ≻'d$, where $≻= W(π)$ and $≻'= W(π' )$.
+*Lemma.* **(pairwise neutrality)** Given unanimity and IIA of $W$, let $\pi = (≻_1, ... ≻_n)$ and $\pi'= (≻_1' ,\cdots, ≻_n' )$ be two vote profiles such that for every voter i, $a ≻_i b ⇔ c ≻_i' d$. Then $a ≻ b ⇔ c ≻'d$, where $≻= W(\pi)$ and $≻'= W(\pi' )$.
 
 ## Lecture 13 Matching
 
@@ -1059,16 +1084,23 @@ Desired properties:
   - Proposer-optimal
   - Attainability
 
-- Preferences by Compatibility: In this case, we have a matrix $A = (a_{i,j})_{n\times n}$ s.t. $i_1\succ_j i_2 \Leftrightarrow a_{i_1,j} > a_{i_2,j}$ and $j_1\succ_i j_2 \Leftrightarrow a_{i,j_1} > a_{i,j_2}$.
+- Preferences by Compatibility: In this case, we have a matrix
+$$
+A = (a_{i,j})_{n\times n}
+$$
+s.t.
+$$
+i_1\succ_j i_2 \Leftrightarrow a_{i_1,j} > a_{i_2,j} \text{ and } j_1\succ_i j_2 \Leftrightarrow a_{i,j_1} > a_{i,j_2}.
+$$
   - There exists a unique stable matching.
 
 ### Matching: House Allocation
 
 - An allocation is an n-dimensional vector $a$ whose i-th component, $a_i$, is the ID of the house assigned to agent $i$.
 - Feasibility: $a_i \ne a_j$ for all $i \ne j$. Let A denote the set of all feasible allocations.
-- A set S of agent is a block coalition for an allocation a if there exists a $z ∈ A(S)$ such that:
-  - for all $i ∈ S$, $z_i ⪰_i a_i$.
-  - exists $j ∈ S$ that $z_j ≻_j a_j$ .
+- A set S of agent is a block coalition for an allocation a if there exists a $z \in A(S)$ such that:
+  - for all $i \in S$, $z_i ⪰_i a_i$.
+  - exists $j \in S$ that $z_j ≻_j a_j$ .
 - The set of allocations that is not blocked by any subset of agents is called the core.
 
 #### Top Trading Cycle Algorithm (TTC)
@@ -1095,7 +1127,7 @@ Huge number of players and strategy space, but onlt the number matters (e.g. tra
 
 - $R$ is a set of $r$ resources;
 - $A = A_1 × ... × A_n$, where $A_i ⊆ 2^R \setminus \{∅\}$ is the set of actions for agent $i$;
-- $c = (c_1, ..., c_r)$, where $c_k : \mathbb{N} → R$ is a cost function for resource $k ∈ R$.
+- $c = (c_1, ..., c_r)$, where $c_k : \mathbb{N} \to R$ is a cost function for resource $k \in R$.
 
 Denote $\#: R\times A \to \mathbb{N}$​ as the function that counts the number of players who took any action that involves resource $r$​ under action profile $a$​. Then we can define the utility function as:
 $$
@@ -1105,7 +1137,7 @@ $$
 
 ### Potential Game
 
-*Def.* A game $G = (N, A, U)$ is an (exact) potential game if there exists a function $P : A \to R$ such that for all $i ∈ \mathbb{N}$, all $a_{−i} ∈ A_{−i}$ and $a_i , a_i' ∈ A_i$,
+*Def.* A game $G = (N, A, U)$ is an (exact) potential game if there exists a function $P : A \to R$ such that for all $i \in \mathbb{N}$, all $a_{−i} \in A_{−i}$ and $a_i , a_i' \in A_i$,
 $$
 u_i(a_i , a_{−i}) − u_i(a_i' , a_{−i}) = P(a_i , a_{−i}) − P(a_i' , a_{−i}).
 $$
