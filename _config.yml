@@ -241,3 +241,7 @@ collections:
     output: true
   researches:
     output: true
+  travelling:
+    output: true
+  daily:
+    output: true
