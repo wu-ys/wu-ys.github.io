@@ -227,7 +227,17 @@ plugins:
 ## => Collections
 ##############################
 collections:
-  notes:
+  course-notes:
     output: true
-  reports:
+  course-reports:
+    output: true
+  tutorials:
+    output: true
+  learning:
+    output: true
+  paper-reading:
+    output: true
+  publications:
+    output: true
+  researches:
     output: true

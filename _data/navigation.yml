@@ -19,37 +19,20 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       Note
+      en      : &EN       Learning
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  笔记
+      zh-Hans : &ZH_HANS  学习新知识
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  笔记
+      zh-Hant : &ZH_HANT  学习新知识
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
       # @end locale config
-    url: /notes.html
-
-  - titles:
-      # @start locale config
-      en      : &EN       Report
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  报告
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  报告
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      # @end locale config
-    url: /reports.html
+    url: /learning.html
 
   - titles:
       # @start locale config
@@ -68,6 +51,22 @@ header:
       # @end locale config
     url: /researches.html
 
+  - titles:
+      # @start locale config
+      en      : &EN       Daily
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  日常
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  日常
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      # @end locale config
+    url: /daily.html
   - titles:
       # @start locale config
       en      : &EN       Archive
