@@ -10,7 +10,7 @@ article_header:
   background_color: '#203028'
   background_image:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .7), rgba(139, 34, 139, .7))'
-    src: /assets/20230118-ACG/lambertian.png
+    src: /assets/images/20230118-ACG/lambertian.png
 ---
 
 主要内容：路径追踪、重要性采样、不同光学模型材料、布料仿真、材质、抗锯齿 <!--more-->
@@ -43,33 +43,33 @@ article_header:
 
 （1）实现直接光源采样前后的渲染速度对比：左边为无光源采样时长时间迭代的效果，右边为有直接光源采样经过短时间运行的效果。
 
-![lambertian_before](../../../assets/20230118-ACG/lambertian_before.png)
+![lambertian_before](/assets/images/20230118-ACG/lambertian_before.png)
 
-![lambertian](../../../assets/20230118-ACG/lambertian.png)
+![lambertian](/assets/images/20230118-ACG/lambertian.png)
 
 （2）经过修补前后的直接光源采样效果：可见左上角光斑有所变化
 
-![wrong-specular](../../../assets/20230118-ACG/wrong-specular.png)
+![wrong-specular](/assets/images/20230118-ACG/wrong-specular.png)
 
-![specular](../../../assets/20230118-ACG/specular.png)
+![specular](/assets/images/20230118-ACG/specular.png)
 
 （3）根据微表面模型实现的投射材料，在不同$\alpha$值（从0到1）下的表现情况
 
-![btdf(4)](../../../assets/20230118-ACG/btdf(4).png)
+![btdf(4)](/assets/images/20230118-ACG/btdf(4).png)
 
-![btdf(3)](../../../assets/20230118-ACG/btdf(3).png)
+![btdf(3)](/assets/images/20230118-ACG/btdf(3).png)
 
-![btdf(2)](../../../assets/20230118-ACG/btdf(2).png)
+![btdf(2)](/assets/images/20230118-ACG/btdf(2).png)
 
-![btdf(1)](../../../assets/20230118-ACG/btdf(1).png)
+![btdf(1)](/assets/images/20230118-ACG/btdf(1).png)
 
 （4）几个不同颜色、不同折射率、不同$\alpha$值透射材料放在一起的综合表现情况：
 
-![btdf(5)](../../../assets/20230118-ACG/btdf(5).png)
+![btdf(5)](/assets/images/20230118-ACG/btdf(5).png)
 
 （5）自定义场景：温馨房间
 
-![room](../../../assets/20230118-ACG/room.png)
+![room](/assets/images/20230118-ACG/room.png)
 
 ## 功能实现方法
 

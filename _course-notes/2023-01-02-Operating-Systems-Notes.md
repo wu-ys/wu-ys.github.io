@@ -67,7 +67,7 @@ Dual Mode: hardware supports at least two modes: kernel and user (a bit of state
 
 Types of mode transfer: syscall, interrupt, trap or exception
 
-![image-20220922110154562](../../../assets/20230102-OS/image-20220922110154562.png)
+![image-20220922110154562](/assets/images/20230102-OS/image-20220922110154562.png)
 
 ### Process from user level
 
@@ -138,11 +138,11 @@ Condition Variable: a queue of threads waiting for something *inside* a critical
 
 **Hoare-style Monitors**: Signaler gives up lock and CPU to waiter; waiter runs immediately; waiter gives up lock, processor back to signaler when it exits critical section or if it waits again.
 
-![image-20221109160855868](../../../assets/20230102-OS/image-20221109160855868.png)
+![image-20221109160855868](/assets/images/20230102-OS/image-20221109160855868.png)
 
 **Mesa-style Monitors**: Signaler keeps lock and processor; waiter placed on a local ready queue for the monitor; practically, need to check condition again after wait.
 
-![image-20221109160847276](../../../assets/20230102-OS/image-20221109160847276.png)
+![image-20221109160847276](/assets/images/20230102-OS/image-20221109160847276.png)
 
 #### Application: Readers & Writers Problem
 
@@ -209,7 +209,7 @@ do {
 }}} until(done)
 ```
 
-![image-20221105150951637](../../../assets/20230102-OS/image-20221105150951637.png)
+![image-20221105150951637](/assets/images/20230102-OS/image-20221105150951637.png)
 
 ### Prevention
 
@@ -222,7 +222,7 @@ do {
 - Banker's algorithm: allocate dynamically, keep the system safe.
   - Allow the particular thread to proceed if `Avail + Alloc >= Max`.
 
-![image-20221105151158075](../../../assets/20230102-OS/image-20221105151158075.png)
+![image-20221105151158075](/assets/images/20230102-OS/image-20221105151158075.png)
 
 ## 4.2 I/O
 
@@ -378,13 +378,13 @@ Internet Protocol (IP): Only **five** layers; The functionalities of the missing
 
 #### 7 Application Layer
 
-![image-20221107203332061](../../../assets/20230102-OS/image-20221107203332061.png)
+![image-20221107203332061](/assets/images/20230102-OS/image-20221107203332061.png)
 
-![image-20221107203423599](../../../assets/20230102-OS/image-20221107203423599.png)
+![image-20221107203423599](/assets/images/20230102-OS/image-20221107203423599.png)
 
 #### 0 Hourglass Model
 
-![image-20221107211405107](../../../assets/20230102-OS/image-20221107211405107.png)
+![image-20221107211405107](/assets/images/20230102-OS/image-20221107211405107.png)
 
 Single Internet-layer module (**IP**)**:**
 
@@ -416,7 +416,7 @@ Sustained Throughput: determined by bottlenect link
 
 - Setup connection followed by data transfer
 
-![img](../../../assets/20230102-OS/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5Lya6aOe55qESVTonJfniZs=,size_14,color_FFFFFF,t_70,g_se,x_16.png)
+![img](/assets/images/20230102-OS/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5Lya6aOe55qESVTonJfniZs=,size_14,color_FFFFFF,t_70,g_se,x_16.png)
 
 #### Solutions
 
@@ -471,7 +471,7 @@ RPC stubs do the work of marshaling and unmarshaling -> understand the datatype?
 - Write a description of function signature using interface definition language
 - Passing value parameters:
 
-![image-20221107232917004](../../../assets/20230102-OS/image-20221107232917004.png)
+![image-20221107232917004](/assets/images/20230102-OS/image-20221107232917004.png)
 
 ### RPC failure
 
@@ -489,9 +489,9 @@ Request lost, reply lost, server crash, client crash?
   - Zero or once: transactional semantics
 - Synchronous & Asynchronous RPC
 
-![image-20221109103209704](../../../assets/20230102-OS/image-20221109103209704.png)
+![image-20221109103209704](/assets/images/20230102-OS/image-20221109103209704.png)
 
-![image-20221109103201015](../../../assets/20230102-OS/image-20221109103201015.png)
+![image-20221109103201015](/assets/images/20230102-OS/image-20221109103201015.png)
 
 ## 6.2 Hard Drives
 
@@ -537,7 +537,7 @@ Functionality: (maintained somewhere in disk)
 
 Name resolution: translate pathname into file number (as an index to locate blocks); create file descriptor; return a handle to user process (mapped to descriptor and blocks)
 
-![image-20221109123522484](../../../assets/20230102-OS/image-20221109123522484.png)
+![image-20221109123522484](/assets/images/20230102-OS/image-20221109123522484.png)
 
 #### Directory
 
@@ -579,11 +579,11 @@ Each FAT item: corresponds to a block, pointing to the next block of the file (l
 - mark all entries free when formating a disk
 - No access rights design, no header in file blocks
 
-![image-20221109182237896](../../../assets/20230102-OS/image-20221109182237896.png)
+![image-20221109182237896](/assets/images/20230102-OS/image-20221109182237896.png)
 
 #### UNIX BSD 4.1
 
-![image-20221109182842628](../../../assets/20230102-OS/image-20221109182842628.png)
+![image-20221109182842628](/assets/images/20230102-OS/image-20221109182842628.png)
 
 - File Metadata: Arributes including user, group, access control bits,
 - Data storage: 12 pointers direct to data blocks (for small files); 3 levels of indirect pointers
@@ -650,7 +650,7 @@ Data stored on multiple disks (redundancy), either by software or hardware
 - RAID 5+: High I/O Rate Parity, each row XORs to zero.
   - Could spread information widely across internet for durability
 
-![image-20221109193614491](../../../assets/20230102-OS/image-20221109193614491.png)
+![image-20221109193614491](/assets/images/20230102-OS/image-20221109193614491.png)
 
 ### File System Reliability (against system failure)
 
@@ -680,7 +680,7 @@ Approach taken in network file server appliances
 
 - ZFS (Sun/Oracle) and OpenZFS
 
-![image-20221109200140934](../../../assets/20230102-OS/image-20221109200140934.png)
+![image-20221109200140934](/assets/images/20230102-OS/image-20221109200140934.png)
 
 #### More General Reliability Solutions
 
@@ -770,7 +770,7 @@ Target: decentralized, history-trackable, unchangeable once confirmed
 
 **Block**: time, nonce, previous hash, body
 
-![image-20221204214254168](../../../assets/20230102-OS/image-20221204214254168.png)
+![image-20221204214254168](/assets/images/20230102-OS/image-20221204214254168.png)
 
 ### Distributed Blcokchain: Bitcoin P2P network
 
@@ -851,7 +851,7 @@ Uses a hierarcy of time servers
 
 **Protocol:** all messages use UDP
 
-![image-20221213152939884](../../../assets/20230102-OS/image-20221213152939884.png)
+![image-20221213152939884](/assets/images/20230102-OS/image-20221213152939884.png)
 
 T0,T1,T2,T3 are recorded and finally received by the client; client adjust time to $T_3 + ((T_1-T_0) + (T_2 - T_3))/2$ upon receiving m' at time T3.
 
@@ -880,7 +880,7 @@ Two scenarios where “happens-before” relation can be directly observed:
 
 2b. When $p_j$ receives $(m, t)$ it sets $L_j := \max(L_j , t)$ and applies Rule 1 before timestamping the event receive(m)
 
-![image-20221213155626920](../../../assets/20230102-OS/image-20221213155626920.png)
+![image-20221213155626920](/assets/images/20230102-OS/image-20221213155626920.png)
 
 Properties: (1) $e\to e'$ implies L(e)<L(e')    (2) L(e)=L(e') implies e || e'
 
@@ -966,7 +966,7 @@ When i receives n-1 (all other) replies, then it can enter C.S.
 Organize the processes involved into a logical ring.
 One token at any time $\to$ passed from node to node along ring
 
-![image-20230101142333409](../../../assets/20230102-OS/image-20230101142333409.png)
+![image-20230101142333409](/assets/images/20230102-OS/image-20230101142333409.png)
 
 ## 12 Distributed File System
 
@@ -981,7 +981,7 @@ Key components: client side, communication layer, server side, virtual FS(VFS)
 Client use RPC to forward FS ops to the server;
 Server serializes all accesses, performs them, and sends back result.
 
-![image-20230101191158525](../../../assets/20230102-OS/image-20230101191158525.png)
+![image-20230101191158525](/assets/images/20230102-OS/image-20230101191158525.png)
 
 ### Distributed Cache
 
@@ -1081,7 +1081,7 @@ Prepare phase: proposer broadcast Prepare(n) and wait for acceptsand collect res
 
 Accept Phase: Broadcast the accept message with a proposed value, and value is chosen if received majority votes
 
-![image-20230101153436131](../../../assets/20230102-OS/image-20230101153436131.png)
+![image-20230101153436131](/assets/images/20230102-OS/image-20230101153436131.png)
 
 ### 2-Phase Commit
 

@@ -100,17 +100,17 @@ Simple format of RISC-V $\to$ simple instruction decoding
 
 Multi-level decoding:
 
-![image-20220418195328525](../../../assets/20220612-Archi/image-20220418195328525.png)
+![image-20220418195328525](/assets/images/20220612-Archi/image-20220418195328525.png)
 
 Datapath & control bits
 
 Structure & critical path:
 
-![image-20220418195554733](../../../assets/20220612-Archi/image-20220418195554733.png)
+![image-20220418195554733](/assets/images/20220612-Archi/image-20220418195554733.png)
 
 Pipelining: 5 stages IF/ID/EX/MEM/WB
 
-![image-20220418200214694](../../../assets/20220612-Archi/image-20220418200214694.png)
+![image-20220418200214694](/assets/images/20220612-Archi/image-20220418200214694.png)
 
 ## 06 Avoiding hazards and stalls
 
@@ -167,7 +167,7 @@ Overall workflow
 - Else, use current PC to index into BTB
 - If there is an entry, then PC = target address in BTB, else PC = PC + 4
 
-![image-20220418204125010](../../../assets/20220612-Archi/image-20220418204125010.png)
+![image-20220418204125010](/assets/images/20220612-Archi/image-20220418204125010.png)
 
 ### Superscalar and Out-of-Order
 
