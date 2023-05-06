@@ -6,7 +6,7 @@ mathjax: true
 excerpt_type: html
 article_header:
   type: overlay
-  theme: light
+  theme: dark
   background_color: '#203028'
   background_image:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .7), rgba(139, 34, 139, .7))'
