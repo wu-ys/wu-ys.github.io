@@ -4,6 +4,11 @@ tag: notes
 title: "Notes: Numerical Analysis (zh-cn)"
 mathjax: true
 excerpt_type: html
+article_header:
+  type: overlay
+  theme: dark
+  background_image:
+    src: /assets/images/cover/IMG_1609.JPG
 ---
 
 2021秋数学系《数值分析》笔记，教师：史作强 <!--more-->
