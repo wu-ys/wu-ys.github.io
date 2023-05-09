@@ -4,6 +4,8 @@ tag: notes
 title: "Notes: Game Theory"
 mathjax: true
 excerpt_type: html
+location: "Background: Tsinghua University, Beijing, China"
+show_location: true
 article_header:
   type: overlay
   theme: dark

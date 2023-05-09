@@ -4,10 +4,14 @@ tag: notes
 title: "Notes: Numerical Analysis (zh-cn)"
 mathjax: true
 excerpt_type: html
+location: "Background: Shanghai, China"
+show_location: true
 article_header:
   type: overlay
   theme: dark
+  background_color: '#203028'
   background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
     src: /assets/images/cover/IMG_1609.JPG
 ---
 

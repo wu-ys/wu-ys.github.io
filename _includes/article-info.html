@@ -13,6 +13,16 @@
   {%- endif -%}
 
   {%- include snippets/assign.html
+    target=site.data.variables.default.page.show_location
+    source0=layout.show_location source1=include.article.show_location -%}
+  {%- assign _show_location = __return -%}
+  {%- if _show_location and include.article.location -%}
+    {%- assign _show_location = true -%}
+  {%- else -%}
+    {%- assign _show_location = false -%}
+  {%- endif -%}
+
+  {%- include snippets/assign.html
     target=site.data.variables.default.page.show_tags
     source0=layout.show_tags source1=include.article.show_tags -%}
   {%- assign _show_tags = __return -%}
@@ -35,7 +45,7 @@
 
   {%- assign _paths_archive = site.paths.archive | default: site.data.variables.default.paths.archive -%}
 
-  {%- if _show_tags or _show_author or _show_date or _pageview -%}
+  {%- if _show_tags or _show_author or _show_date or _pageview or _show_location -%}
     <div class="article__info clearfix">
       {%- if _show_tags -%}
 
@@ -54,7 +64,7 @@
         </ul>
       {%- endif -%}
 
-      {%- if _show_author or _show_date or _pageview -%}
+      {%- if _show_author or _show_date or _pageview or _show_location -%}
         <ul class="right-col menu">
           {%- if _show_author  -%}
             <li><i class="fas fa-user"></i> <span>{{ _author.name }}</span></li>
@@ -64,6 +74,12 @@
             <li>
               {%- include snippets/get-locale-string.html key='ARTICLE_DATE_FORMAT' -%}
               <i class="far fa-calendar-alt"></i> <span>{{ include.article.date | date: __return }}</span>
+            </li>
+          {%- endif -%}
+
+          {%- if _show_location -%}
+            <li>
+              <i class="far fa-calendar-alt"></i> <span>{{ include.article.location }}</span>
             </li>
           {%- endif -%}
 
