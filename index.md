@@ -5,8 +5,7 @@ title: About Me
 
 I'm Yushen Wu (吴宇深), a junior student in Yao Class, Tsinghua University. My major is Computer Science and I'm also studying for a minor degree of math at Department of Mathematics Science & Qiuzhen College.
 
-My interest lies in the research of numerical algorithms and physics-based simulation. I have had rich experiences in C++ programming and numerical
-programming using Matlab and Python.
+My interest lies in the research of numerical algorithms and physics-based simulation. I have had rich experiences in C++ programming and numerical programming using Matlab and Python.
 
 Currectly, I'm carrying out researches about linear equations solver for PDEs from simulation, under the instruction of [Prof. Tao Du.](https://people.iiis.tsinghua.edu.cn/~taodu/)
 
