@@ -4,6 +4,15 @@ tag: notes
 title: "Notes: Numerical Analysis (zh-cn)"
 mathjax: true
 excerpt_type: html
+location: "Shanghai City, China, Jan 2022"
+show_location: true
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/cover/IMG_1609.JPG
 ---
 
 2021秋数学系《数值分析》笔记，教师：史作强 <!--more-->

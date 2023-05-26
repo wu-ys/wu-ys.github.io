@@ -4,7 +4,7 @@ tag: notes
 title: "Notes: Game Theory"
 mathjax: true
 excerpt_type: html
-location: "Background: Tsinghua University, Beijing, China"
+location: "Tsinghua University, Beijing, China, May 2022"
 show_location: true
 article_header:
   type: overlay

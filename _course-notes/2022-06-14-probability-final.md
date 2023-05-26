@@ -4,7 +4,7 @@ tag: notes
 title: "Notes: Probability Theory"
 mathjax: true
 excerpt_type: html
-location: "Background: Nan'ao Island, Guangdong, China"
+location: "Nan'ao Island, Shantou, China, Feb 2023"
 show_location: true
 article_header:
   type: overlay

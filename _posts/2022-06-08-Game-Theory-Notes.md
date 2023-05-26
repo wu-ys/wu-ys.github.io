@@ -4,6 +4,8 @@ tag: notes
 title: "Notes: Game Theory"
 mathjax: true
 excerpt_type: html
+location: "Tsinghua University, Beijing, China, May 2022"
+show_location: true
 article_header:
   type: overlay
   theme: dark
@@ -185,7 +187,7 @@ Define $δ_x$ to be a degenerate lottery that gives $x$ for certain, and $E(p)$ 
 
 ### Strategic Form Game
 
-*Def.* **(Strategic Form Game/Normal Form Game)** A triplet
+*Def.* **(Strategic Form Game/Normal Form Game)** A triplet 
 $$
 G = \{\mathcal{I}, (S_i)_{i\in \mathcal{I}}, (u_i)_{i\in\mathcal{I} }\}
 $$
@@ -544,7 +546,7 @@ BR(\sigma_l) = \arg \max_{\sigma_f \in\Delta_f} u_f (\sigma_l , \sigma_f ).
 $$
  The goal of the leader can be represented as follows.
 $$
-\max_{\sigma_l\in\Delta_l} u_l(\sigma_l , \sigma_f ) \text{ s.t. }\sigma_f \in BR(\sigma_l).
+\max _{\sigma_l\in\Delta_l} u_l(\sigma_l , \sigma_f ) \text{ s.t. }\sigma_f \in BR(\sigma_l).
 $$
 
 - Any problem in this optimization? $BR(\sigma_l)$ may be a set value function.

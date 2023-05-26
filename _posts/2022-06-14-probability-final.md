@@ -4,10 +4,14 @@ tag: notes
 title: "Notes: Probability Theory"
 mathjax: true
 excerpt_type: html
+location: "Nan'ao Island, Shantou, China, Feb 2023"
+show_location: true
 article_header:
   type: overlay
   theme: dark
+  background_color: '#203028'
   background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
     src: /assets/images/cover/DSC_3236.JPG
 ---
 
@@ -15,7 +19,7 @@ article_header:
 
 ## Chapter 3: Independence and Convergence by distribution
 
-![image-20220613202148138](/assets/20220614-Prob/image-20220613202148138.png)
+![image-20220613202148138](/assets/images/20220614-Prob/image-20220613202148138.png)
 
 ## Chapter 4: LLN
 
@@ -26,7 +30,7 @@ article_header:
 - (KhinChin WLLN) $X_1 \in L^1(\Omega)$, 则 $\frac{S_n}{n} \to m$ 依概率收敛. (proof. 截断法)
 - (Komogorov SLLN) $X_1 \in L^1(\Omega)$, 则 $\frac{S_n}{n} \to m$ 几乎处处收敛.
 
-![image-20220613201927559](/assets/20220614-Prob/image-20220613201927559.png)
+![image-20220613201927559](/assets/images/20220614-Prob/image-20220613201927559.png)
 
 ## Chapter 5: CLT
 
@@ -34,9 +38,9 @@ article_header:
 
 *Prop.* $\phi_\mu(0) = 1$, $\lvert \phi_\mu(t)\rvert \le 1$, $\phi_{\mu}(t) = \overline{\phi_{\mu(-t)}}$, $\phi_{aX+b}(t)= e^{itb}\phi_X(at)$; $\phi_\mu: \mathbb{R} \to \mathbb{C}$ is uniformly continuous; The convex combination of c.f.s is also a c.f.; If $X\perp Y$, then $\phi_{X+Y} = \phi_X\phi_Y$.
 
-![image-20220613202956241](/assets/20220614-Prob/image-20220613202956241.png)
+![image-20220613202956241](/assets/images/20220614-Prob/image-20220613202956241.png)
 
-![image-20220613203033344](/assets/20220614-Prob/image-20220613203033344.png)
+![image-20220613203033344](/assets/images/20220614-Prob/image-20220613203033344.png)
 
 由此可反向由特征函数**唯一**确定一个概率分布.
 
@@ -208,9 +212,9 @@ $$
 - 存在 $X_\infty \in L^1$, 使得$X_n$几乎处处收敛到$X_\infty$; (由一致可积性可知也有$X_n$依$L^1$范数收敛到$X_\infty$).
 - $\mathfrak{X}$ 是一个Levy鞅. (此时恰有$X_n = \mathbb{E}[X_\infty\vert F_n]$, 从而$X_\infty$是终元)
 
-![image-20220613200538456](/assets/20220614-Prob/image-20220613200538456.png)
+![image-20220613200538456](/assets/images/20220614-Prob/image-20220613200538456.png)
 
-![image-20220613200554263](/assets/20220614-Prob/image-20220613200554263.png)
+![image-20220613200554263](/assets/images/20220614-Prob/image-20220613200554263.png)
 
 *Thm.* 若$\mathfrak{X}$是一个F鞅, 且$\mathfrak{X}\subset L^p$, 则以下命题等价:
 

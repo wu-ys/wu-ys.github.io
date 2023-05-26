@@ -4,7 +4,7 @@ tag: notes
 title: "Notes: Numerical Analysis (zh-cn)"
 mathjax: true
 excerpt_type: html
-location: "Background: Shanghai, China"
+location: "Shanghai City, China, Jan 2022"
 show_location: true
 article_header:
   type: overlay

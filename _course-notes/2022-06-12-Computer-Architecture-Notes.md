@@ -4,7 +4,7 @@ tag: notes
 title: "Notes: Computer Architecture"
 mathjax: true
 excerpt_type: html
-location: "Background: East Suzhou Bay, Suzhou City, Jiangsu, China"
+location: "East Suzhou Bay, Suzhou, China, Jun 2022"
 show_location: true
 article_header:
   type: overlay
