@@ -1,3 +1,20 @@
+---
+layout: article
+tag: notes
+title: "Notes: Topology"
+mathjax: true
+excerpt_type: html
+location: "Nan'ao Island, Shantou, China, Feb 2023"
+show_location: true
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/cover/DSC_2781.JPG
+---
+
 P is called a **limit point** of A, if every neighborhood of P contains at least one point of $A-\{P\}$.
 
 Zariski topology: A subset of $X = \mathbb{C}$ is open, if its complement is finite of $X$. Let $f(t) \in \mathbb{C}[t]$ be a polynomial $\Rightarrow$ $f(t) = a(t-a_1)(t-a_2)\cdots(t-a_n)$ with $a_1,a_2,\cdots,a_n \in\mathbb{C}$.
