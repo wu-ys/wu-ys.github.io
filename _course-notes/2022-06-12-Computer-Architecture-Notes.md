@@ -13,6 +13,8 @@ article_header:
     src: /assets/images/cover/IMG_2110.JPG
 ---
 
+2022春交叉信息院《计算机系统结构》笔记，教师：高鸣宇
+
 Notes of IIIS *Computer Architecture* course, Spring 2022, taught by Prof. Mingyu Gao. <!--more-->
 
 ## 01: basic concepts

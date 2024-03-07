@@ -15,6 +15,8 @@ article_header:
     src: /assets/images/cover/DSC_2781.JPG
 ---
 
+2022秋交叉信息院《操作系统与分布式系统》笔记，教师：徐葳
+
 Notes of IIIS *Operation Systems and Distributed Systems* course, Autumn 2022, taught by Prof. Wei Xu. <!--more-->
 
 - Real-world coding

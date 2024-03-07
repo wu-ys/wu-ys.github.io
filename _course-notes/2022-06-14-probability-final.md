@@ -1,7 +1,7 @@
 ---
 layout: article
 tag: notes
-title: "Notes: Probability Theory"
+title: "Notes: Probability Theory (Chinese)"
 mathjax: true
 excerpt_type: html
 location: "Nan'ao Island, Shantou, China, Feb 2023"
@@ -15,7 +15,9 @@ article_header:
     src: /assets/images/cover/DSC_3236.JPG
 ---
 
-2022春数学系《概率论1》笔记，教师：荆文甲 <!--more-->
+2022春数学系《概率论1》笔记，教师：荆文甲
+
+Notes of DMS *Probability I* course, Spring 2022, taught by Prof. Wenjia Jing. <!--more-->
 
 ## Chapter 3: Independence and Convergence by distribution
 

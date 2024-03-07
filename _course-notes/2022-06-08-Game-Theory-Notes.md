@@ -13,6 +13,8 @@ article_header:
     src: /assets/images/cover/IMG_1220.JPG
 ---
 
+2022春交叉信息院《博弈论》笔记，教师：房智轩
+
 Notes of IIIS *Game Theory* course, Spring 2022, taught by Prof. Zhixuan Fang. <!--more-->
 
 ## Lecture 1: Introduction

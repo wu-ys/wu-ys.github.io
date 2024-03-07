@@ -1,7 +1,7 @@
 ---
 layout: article
 tag: notes
-title: "Notes: Numerical Analysis (zh-cn)"
+title: "Notes: Numerical Analysis (Chinese)"
 mathjax: true
 excerpt_type: html
 location: "Shanghai City, China, Jan 2022"
@@ -15,7 +15,9 @@ article_header:
     src: /assets/images/cover/IMG_1609.JPG
 ---
 
-2021秋数学系《数值分析》笔记，教师：史作强 <!--more-->
+2021秋数学系《数值分析》笔记，教师：史作强
+
+Notes of DMS *Numerical Analysis* course, Autumn 2021, taught by Prof. Zuoqiang Shi. <!--more-->
 
 ## Chapter 2 线性方程组的直接解法
 
