@@ -452,7 +452,7 @@ Recall: $X,Y$ are homeomorphic if $\exists f:X\to Y, g:Y\to X$ continuous s.t. $
 
 *Def.* $X,Y$ are called **homotopy equivalent** if $\exists f:X\to Y, g:Y\to X$ continuous s.t. $g\circ f \simeq id, f\circ g\simeq id$. $f$ and $g$ are called homotopy equivalence and they are called the homotopy inverse of each other. We denote $X\simeq Y$ if $X,Y$ are homotopy equivalent.
 
-In this case, the induced maps $f_\ast g_\ast = (f\circ g)_\ast = id$, so $f_\ast,g_\ast$ are inverse isomorphisms of $\pi_1(X) \approx \pi_1(Y)$.
+In this case, the induced maps $f_\ast, g_\ast = {(f\circ g)}_\ast = id$, so they are inverse isomorphisms of $\pi_1(X) \approx \pi_1(Y)$.
 
 $X,Y$ homeomorphic $\Rightarrow X\simeq Y$.
 
@@ -471,8 +471,9 @@ where $\gamma(s) = F(p,s)$.
 *Thm.* If $X,Y$ are homotopy equivalent spaces, then $\pi_1(X) \approx \pi_1(Y)$.
 
 - proof. Let $f:X\to Y, g:Y\to X$ s.t. $id_X\simeq_F g\circ f, id_Y\simeq_G f\circ g$. Let $p = g(q) \in X,q\in Y$. We need to show that $f_\ast: \pi_1(X,p) \to \pi_1(Y,f(p))$ is an isomorphism.
-- Let $\gamma:I\to X, \gamma(s) = F(p,s)$. By the theorem above we can see $(g\circ f)_\ast = \gamma_\ast : \pi_1(X,p)\to \pi_1(X,g\circ f(p))$ is an isomorphism.
-- Since $(g\circ f)_\ast = g_\ast \circ f_\ast$, thus $f_\ast $ is injective.
+- Let $\gamma:I\to X$ with $\gamma(s)=F(p,s)$.
+- By the theorem above we can see $(g\circ f)_\ast = \gamma_\ast : \pi_1(X,p)\to \pi_1(X,g\circ f(p))$ is an isomorphism.
+- Since $(g\circ f)_\ast = g_\ast \circ f_\ast$, thus $f_\ast$ is injective.
 - Similarly $(f\circ g)_\ast = f_\ast \circ g_\ast : \pi_1(Y,q) \to \pi_1(T,f(p))$ is an isomorphim, then $f_\ast$ is surjective thus isomorphism.
 
 Cor. If $A\subset X$ and $\exists$ deformation retraction from $X$ to $A$ then $\pi_1(X) \simeq \pi_1(A)$. If $X$ is contractible, $\pi_1(X) = \{e\}$.
@@ -661,12 +662,18 @@ homological algebra is a subject which studies chain complexes and the homology 
 - (2) $H_0(X) = C_0(X) / \Im \partial_1$, let $\mathcal{E}: C_0(X)\to \mathbb{Z}$ defined as $\mathcal{E}(\sum_i n_i\sigma_i) = \sum_i n_i$, we see $\mathcal{E}$ is surjective and we need to show $\ker \mathcal{E} = \Im \partial_1$. For all $\sigma:\Delta^1 \to X, \mathcal{E}(\partial_1(\sigma)) = \mathcal{E}(\sigma\vert_{[v_1]} - \sigma\vert_{[v_0]}) = 1-1 = 0$. So $\Im \partial_1 \subset \ker \mathcal{E}$.
 
 *Def.* Consider the chain complex
+
 $$
 \cdots \to C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0(X) \xrightarrow{\varepsilon} \mathbb{Z} \to 0
 $$
+
 where $\varepsilon(\sum_i n_i\sigma_i) = \sum_i n_i$, X is required to be nonempty. We can see $\varepsilon \partial_1 = 0$, hence it induces a map $H_0(X) \to \mathbb{Z}$ with kernel $\tilde H_0(X)$.
 
-Let $\tilde H_n(X)$ be the homology of this chain complex, called reduced homology of $X$. $H_n(X) = \begin{cases} \tilde H_n(X), n\ge 1 \\ \tilde H_n(X) \oplus \mathbb{Z}, n = 0\end{cases}$
+Let $\tilde H_n(X)$ be the homology of this chain complex, called reduced homology of $X$.
+
+$$
+H_n(X) = \begin{cases} \tilde H_n(X), n\ge 1 \newline\ \tilde H_n(X) \oplus \mathbb{Z}, n = 0\end{cases}
+$$
 
 ### Homotopy Invariance
 
@@ -674,26 +681,26 @@ Hommotopy equivalent spaces have isomorphic groups? $f:X\to Y$ induce $f_\ast:H_
 
 Let $f:X\to Y$ continuous, we want to define the homomorphism $f_\ast: H_n(X)\to H_n(Y)$.
 
-Define $f_\#:\Delta^n \to Y$ as n-simplex of Y by $f_\#(\sigma):= f \circ \sigma:\Delta^n \to Y$. Extend $f_\#$ to $C_n(X)$ linearly by  $f_\#(\sum_i n_i \sigma) := \sum_i n_i f_\# (\sigma_i) = \sum_i n_i f\sigma_i$. So we obtain a homomorphism $f_\#: C_n(X) \to C_n(Y)$.
+Define $f_\sharp:\Delta^n \to Y$ as n-simplex of Y by $f_\sharp(\sigma):= f \circ \sigma:\Delta^n \to Y$. Extend $f_\sharp$ to $C_n(X)$ linearly by  $f_\sharp(\sum_i n_i \sigma) := \sum_i n_i f_\sharp(\sigma_i) = \sum_i n_i f\sigma_i$. So we obtain a homomorphism $f_\sharp: C_n(X) \to C_n(Y)$.
 
-Lemma. $f_\# \partial = \partial f_\#$. proof:
+Lemma. $f_\sharp\partial = \partial f_\sharp$. proof:
 
 $$
-f_\# \partial(\sigma) = f_\# (\sum_i (-1)^i \sigma\vert_{[v_0,\cdots,\hat v_i, \cdots, v_n]}) =  \sum_i (-1)^i f \sigma\vert_{[v_0,\cdots,\hat v_i, \cdots, v_n]} = \partial f_\#(\sigma)
+f_\sharp\partial(\sigma) = f_\sharp(\sum_i (-1)^i \sigma\vert_{[v_0,\cdots,\hat v_i, \cdots, v_n]}) =  \sum_i (-1)^i f \sigma\vert_{[v_0,\cdots,\hat v_i, \cdots, v_n]} = \partial f_\sharp(\sigma)
 $$
 
 Thus we have a commutative diagram:
 
 $$
 \xymatrix{
- \cdots \ar[r]& C_{n+1}(X) \ar[r]^{\partial}\ar[d]^{f_\#} & C_{n}(X) \ar[r]^{\partial}\ar[d]^{f_\#}& C_{n-1}(X) \ar[r]\ar[d]^{f_\#}& \cdots\\
+ \cdots \ar[r]& C_{n+1}(X) \ar[r]^{\partial}\ar[d]^{f_\sharp} & C_{n}(X) \ar[r]^{\partial}\ar[d]^{f_\sharp}& C_{n-1}(X) \ar[r]\ar[d]^{f_\sharp}& \cdots\\
   \cdots \ar[r]& C_{n+1}(Y) \ar[r]^{\partial}& C_{n}(Y) \ar[r]^{\partial}& C_{n-1}(Y) \ar[r]& \cdots
 }
 $$
 
-The relation is also expressed by saying $f_\#$ defines a **chain map** from the singular chain complex of $X$ to that of $Y$. $f_\#$ takes cycles to cyles since $\partial \alpha =0 \Rightarrow \partial (f_\# \alpha) = f_\# (\partial \alpha) = 0$. $f_\#$ takes boundaries to boundaries since $f_\#(\partial\beta) = \partial (f_\# \beta)$. Hence $f_\#$ induces a homomorphism $f_\ast: H_n(X) \to H_n(Y)$.
+The relation is also expressed by saying $f_\sharp$ defines a **chain map** from the singular chain complex of $X$ to that of $Y$. $f_\sharp$ takes cycles to cyles since $\partial \alpha =0 \Rightarrow \partial (f_\sharp\alpha) = f_\sharp(\partial \alpha) = 0$. $f_\sharp$ takes boundaries to boundaries since $f_\sharp(\partial\beta) = \partial (f_\sharp\beta)$. Hence $f_\sharp$ induces a homomorphism $f_\ast: H_n(X) \to H_n(Y)$.
 
-Let $\alpha \in Z_n(X)$, let $[\alpha]$ be the image of $\alpha$ in $H_n(X) = Z_n(X) / B_n(X)$, then $f_\ast ([\alpha]) = [f_\#(\alpha)] \in H_n(Y), f_\#(\alpha) \in Z_n(Y)$.
+Let $\alpha \in Z_n(X)$, let $[\alpha]$ be the image of $\alpha$ in $H_n(X) = Z_n(X) / B_n(X)$, then $f_\ast ([\alpha]) = [f_\sharp(\alpha)] \in H_n(Y), f_\sharp(\alpha) \in Z_n(Y)$.
 
 Remark. Let $C_\cdot$, $D_\cdot$ be two chain complexes, a chain map $f:C_\cdot\to D_\cdot$ consists of homomorphisms $f_n:C_n\to D_n$ s.t. $\partial f_n = f_{n-1} \partial$.
 
@@ -703,7 +710,7 @@ Basic facts: (1): $X\xrightarrow g Y\xrightarrow f Z$, we have $(f\circ g) _\ast
 
 - proof. Let $F:X\times I \to Y$ s.t. $f\simeq_F g$. Want to subdevide $\Delta^n \times I$ into (n+1) simplexes.
 
-The relationship $\partial P + P\partial = g_\# - f_\#$ is expressed by saying that $P$ is a **chain homotopy** between chain maps $f_\#$ and $g_\#$. So chain homotopic maps induce the same homomorphism on homology.
+The relationship $\partial P + P\partial = g_\sharp - f_\sharp$ is expressed by saying that $P$ is a **chain homotopy** between chain maps $f_\sharp$ and $g_\sharp$. So chain homotopic maps induce the same homomorphism on homology.
 
 *Cor.* If $f:X\to Y$ be a homotopy equivalence, then $f_\ast: H_n(X) \to H_n(Y)$ is an isomorphism. Thus $\tilde H_n(X) = 0$ for all n if $X$ is contractible.
 
@@ -741,7 +748,7 @@ Define $\partial: H_n(C_\cdot) \to H_{n-1}(A_\cdot)$ by $\partial ([c])  = [a]$.
 
 *Lemma.* $\partial : H_n(C_\cdot) \to H_{n-1}(A_\cdot)$ is well-defined and is a homomorphism.
 
-We have s sequence
+We have a sequence
 
 $$
 \cdot \to H_{n+1}(C_\cdot) \xrightarrow \partial H_n(A_\cdot) \xrightarrow {f_\ast} H_n(B_\cdot) \xrightarrow \partial H_{n-1}(A_\cdot) \xrightarrow {f_\ast} H_{n-1}(B_\cdot) \xrightarrow {g_\ast}\cdots
@@ -792,7 +799,7 @@ Since $\partial^2 = 0$ in the complex $C_\cdot (X) = \{C_n(X)\}_n$, so $\partial
 *Remark.* Consider a pair $(X,A)$ with $A\ne \varnothing$. Consider the short exact seqeunce
 
 $$
-0 \to \tilde C_\cdot (A) \xrightarrow{i_\cdot} \tilde C_\cdot(X) \xrightarrow{j_\cdots} C_\cdot(X,A) \to 0
+0 \to \tilde C_\cdot (A) \xrightarrow{i_\cdot} \tilde C_\cdot(X) \xrightarrow{j_\cdot} C_\cdot(X,A) \to 0
 $$
 
 where
@@ -800,7 +807,7 @@ where
 So we get a long exact sequence
 
 $$
-\cdots \to H_n(A) \to H_n(X) \to H_n(X,A) \to& H_{n-1}(A) &\to H_{n-1}(X) \to \cdots \\ &\cdots&\to H_0(X,A) \to 0
+\cdots \to H_n(A) \to H_n(X) \to H_n(X,A) \to H_{n-1}(A) \to H_{n-1}(X) \to \cdots \newline \cdots\to H_0(X,A) \to 0
 $$
 
 Consider the diagram
@@ -816,16 +823,16 @@ where i is inclusion, j is quotient map. The diagram is commutative. Let $n$ ver
 
 $$
 \xymatrix{
-& 0\ar[d] & 0\ar[d] & 0\ar[d] & \\ \cdots\ar[r] & A_{n+1}\ar[d]^{i}\ar[r]^\part & A_n\ar[d]^{i}\ar[r]^\part & A_{n-1}\ar[d]^{i}\ar[r] & \cdots \\
- \cdots\ar[r] & B_{n+1}\ar[d]^{j}\ar[r]^\part & B_n\ar[d]^{j}\ar[r]^\part & B_{n-1}\ar[d]^{j}\ar[r] & \cdots \\
- \cdots\ar[r] & C_{n+1}\ar[d]\ar[r]^\part & C_n\ar[d]\ar[r]^\part & C_{n-1}\ar[d]\ar[r] & \cdots \\& 0 & 0 & 0 &
+& 0\ar[d] & 0\ar[d] & 0\ar[d] & \\ \cdots\ar[r] & A_{n+1}\ar[d]^{i}\ar[r]^\partial & A_n\ar[d]^{i}\ar[r]^\partial & A_{n-1}\ar[d]^{i}\ar[r] & \cdots \\
+ \cdots\ar[r] & B_{n+1}\ar[d]^{j}\ar[r]^\partial & B_n\ar[d]^{j}\ar[r]^\partial & B_{n-1}\ar[d]^{j}\ar[r] & \cdots \\
+ \cdots\ar[r] & C_{n+1}\ar[d]\ar[r]^\partial & C_n\ar[d]\ar[r]^\partial & C_{n-1}\ar[d]\ar[r] & \cdots \\& 0 & 0 & 0 &
 }
 $$
 
 This stretches out into a long exact sequence of homology groups:
 
 $$
-\cdots \to H_n(A) \xrightarrow{i_\ast} H_n(B) \xrightarrow{j_\ast} H_n(C) \xrightarrow{\part} H_{n-1}(A) \xrightarrow{i_\ast} H_{n-1}(B) \to \cdots
+\cdots \to H_n(A) \xrightarrow{i_\ast} H_n(B) \xrightarrow{j_\ast} H_n(C) \xrightarrow{\partial} H_{n-1}(A) \xrightarrow{i_\ast} H_{n-1}(B) \to \cdots
 $$
 
 *Remark.* Definition of $\partial:H_n(C) \to H_{n-1}(A)$?
@@ -833,8 +840,8 @@ $$
 *Thm.* This sequence of homology groups is exact.
 
 - proof. (1) $\Im i_\ast \subset \ker j_\ast$
-- (2) $\Im j_\ast \subset \ker \part$.
-- (3) $\Im \part \subset \ker i_\ast$.
+- (2) $\Im j_\ast \subset \ker \partial$.
+- (3) $\Im \partial \subset \ker i_\ast$.
 - (4)
 - (5)
 - (6)
@@ -865,7 +872,7 @@ $$
 q_\ast: H_n(X,A) \to H_n(X/A, A/A) \approx \tilde H_n(X/A), \forall n.
 $$
 
-Remark. $(X,A)$ be a good pair $\Rightarrow$ exists a long exaxt sequence
+Remark. $(X,A)$ be a good pair $\Rightarrow$ exists a long exact sequence
 
 $$
 \to \tilde H_n(A) \xrightarrow{i_{1\ast}} \tilde H_n(X) \xrightarrow{j_\ast} \tilde H_n(X/A) \xrightarrow{\partial} \tilde H_{n-1}(A) \to \cdots
@@ -901,7 +908,7 @@ $$
 
 Euler Characteristic $\chi(X) = \sum_n (-1)^n c_n$ where $c_n$ is the number of n-cells of $X$. This depends only on the homotopy type of $X$.
 
-*Thm.* $\chi (X)= \sum_n(-1)^n\rank H_n(X)$.
+*Thm.* $\chi (X)= \sum_n(-1)^n\text{rank} H_n(X)$.
 
 ### Mayer-Vietoris Sequence
 
