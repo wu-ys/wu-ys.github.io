@@ -243,5 +243,7 @@ collections:
     output: true
   travelling:
     output: true
+  crp:
+    output: true
   daily:
     output: true

@@ -9,7 +9,7 @@ My interest lies in the research of numerical algorithms in computer graphics an
 
 Currectly, I'm carrying out researches about linear equations solvers for PDEs from simulation, under the instruction of [Prof. Tao Du](https://people.iiis.tsinghua.edu.cn/~taodu/)
 
-- Email: [wu-ys20@mails.tsinghua.edu.cn](mailto:wu-ys20@mails.tsinghua.edu.cn)
+- Email: [wuyushen612@gmail.com](mailto:wuyushen612@gmail.com)
 
 - Website: [wu-ys.github.io](https://wu-ys.github.io)
 
